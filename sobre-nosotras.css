@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #fdf2f0;
+    color: #4a3b3b;
+}
+
+/* Encabezado */
+header {
+    background-color: #f7d9d5;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e8c2bd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #b05c5c;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d98c8c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #c97979;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Título principal */
+main > h2 {
+    color: #b05c5c;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Cada sección de persona */
+.persona {
+    margin-bottom: 60px;
+}
+
+/* Título de cada persona */
+.persona h3 {
+    color: #b05c5c;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Imagen alineada a la derecha en ambas secciones */
+.foto-persona {
+    float: right;
+    width: 280px;
+    max-width: 40%;
+    height: auto;
+    margin: 0 0 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafos */
+.persona p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+/* Limpia el float al final de cada sección */
+.persona::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main > h2 {
+        font-size: 1.6rem;
+    }
+
+    .persona h3 {
+        font-size: 1.4rem;
+    }
+
+    .foto-persona {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .persona p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+    }
+}
