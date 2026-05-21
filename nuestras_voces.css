@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #fdf2f0;
+    color: #4a3b3b;
+}
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+header {
+    background-color: #f7d9d5;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e8c2bd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #b05c5c;
+}
+
+/* =========================
+   NAVEGACIÓN
+   ========================= */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d98c8c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #c97979;
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+   ========================= */
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* TÍTULO PRINCIPAL */
+main > h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #b05c5c;
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+/* Introducción */
+.intro {
+    max-width: 760px;
+    margin: 0 auto 50px;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Tarjetas de audio */
+.audio-card {
+    margin-bottom: 40px;
+    padding: 35px;
+    background-color: #fffaf9;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.audio-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Título de cada audio */
+.audio-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #b05c5c;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* Descripción */
+.descripcion {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+    font-size: 1.02rem;
+    color: #5a4a4a;
+}
+
+/* Reproductor de audio */
+.audio-player {
+    width: 100%;
+    max-width: 600px;
+    height: 54px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(217, 140, 140, 0.15);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    main {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    main > h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+        margin-bottom: 35px;
+    }
+
+    .audio-card {
+        padding: 25px;
+    }
+
+    .audio-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .descripcion {
+        font-size: 1rem;
+    }
+
+    .audio-player {
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    main {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    main > h2 {
+        font-size: 1.6rem;
+    }
+
+    .audio-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .descripcion {
+        font-size: 0.95rem;
+    }
+}
