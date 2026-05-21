@@ -5,7 +5,9 @@ body {
     color: #4a3b3b;
 }
 
-/* Encabezado */
+/* =========================
+   ENCABEZADO
+   ========================= */
 header {
     background-color: #f7d9d5;
     padding: 20px;
@@ -19,6 +21,11 @@ header h1 {
     color: #b05c5c;
 }
 
+/* =========================
+   NAVEGACIÓN
+   (Mismos estilos usados en
+   las demás vistas del sitio)
+   ========================= */
 nav {
     margin-top: 15px;
 }
@@ -38,97 +45,151 @@ nav a:hover {
     background-color: #c97979;
 }
 
-/* Contenedor principal */
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ========================= */
 main {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 40px;
     background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* TÍTULO PRINCIPAL */
+main > h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #b05c5c;
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+/* =========================
+   TARJETAS DE PERSONAS
+   ========================= */
+.persona {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    padding: 35px;
+    background-color: #fffaf9;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Imagen */
+.foto-persona {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenido */
+.contenido-persona {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Nombre */
+.contenido-persona h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #b05c5c;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* Párrafos */
+.contenido-persona p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
     line-height: 1.8;
     text-align: justify;
 }
 
-/* Título principal */
-main > h2 {
-    color: #b05c5c;
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 40px;
-    text-align: center;
+/* Contacto */
+.contacto {
+    margin-top: 20px;
+    font-weight: bold;
 }
 
-/* Cada sección de persona */
-.persona {
-    margin-bottom: 60px;
+/* =========================
+   ENLACES DE CORREO
+   ========================= */
+.contenido-persona a {
+    color: #c26b7a;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
 }
 
-/* Título de cada persona */
-.persona h3 {
-    color: #b05c5c;
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 20px;
+.contenido-persona a:hover {
+    color: #a84f60;
+    text-decoration: underline;
 }
 
-/* Imagen alineada a la derecha en ambas secciones */
-.foto-persona {
-    float: right;
-    width: 280px;
-    max-width: 40%;
-    height: auto;
-    margin: 0 0 20px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Párrafos */
-.persona p {
-    margin-bottom: 18px;
-    font-size: 1.05rem;
-}
-
-/* Limpia el float al final de cada sección */
-.persona::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-/* Responsive */
+/* =========================
+   RESPONSIVE
+   ========================= */
 @media (max-width: 768px) {
-    main {
-        margin: 20px;
-        padding: 25px;
+    header {
+        padding: 20px 15px;
     }
 
     header h1 {
         font-size: 2rem;
     }
 
-    main > h2 {
-        font-size: 1.6rem;
+    nav a {
+        padding: 10px 20px;
+        font-size: 0.95rem;
     }
 
-    .persona h3 {
-        font-size: 1.4rem;
+    main {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    main > h2 {
+        font-size: 1.8rem;
+        margin-bottom: 35px;
+    }
+
+    .persona {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 25px;
     }
 
     .foto-persona {
-        float: none;
-        display: block;
-        width: 100%;
+        width: 180px;
+        height: 180px;
+    }
+
+    .contenido-persona {
         max-width: 100%;
-        margin: 0 0 20px 0;
     }
 
-    .persona p {
+    .contenido-persona h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .contenido-persona p {
         font-size: 1rem;
+        text-align: justify;
     }
 
-    nav a {
-        padding: 8px 16px;
-        font-size: 0.95rem;
+    .contacto {
+        text-align: center;
     }
 }
